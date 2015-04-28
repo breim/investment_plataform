@@ -1,5 +1,50 @@
 source 'https://rubygems.org'
 
+
+# Custom Gems
+gem 'devise'
+gem 'devise_invitable', '~> 1.3.4'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
+#gem 'friendly_id', '~> 5.0.0'
+gem 'devise-async'
+gem 'bootstrap-sass'
+gem 'font-awesome-sass', '~> 4.3.0'
+gem 'nprogress-rails'
+gem 'sidekiq', '3.2.6'
+gem 'cocoon'
+gem 'searchkick'
+gem 'sendgrid'
+gem 'jquery-datetimepicker-rails'
+
+# Proccess images and save on AWS
+gem 'paperclip'
+gem 'aws-sdk', '1.61.0'
+#
+
+gem 'bootstrap_form', github: 'bootstrap-ruby/rails-bootstrap-forms' 
+gem 'impressionist'
+gem 'shareable'
+gem 'socialization'
+
+#Text editor
+gem 'bootsy', :git => 'git://github.com/breim/bootsy'
+
+# Figaro to handle some ENV variables aka password in application.yml
+gem "figaro"
+
+
+group :development do
+	gem 'thin'
+	gem 'quiet_assets'
+	gem 'byebug'
+	gem "better_errors"
+end	
+
+# ----=> 
+
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record
