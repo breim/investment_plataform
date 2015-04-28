@@ -16,6 +16,7 @@ gem 'cocoon'
 gem 'searchkick'
 gem 'sendgrid'
 gem 'jquery-datetimepicker-rails'
+gem 'responders'
 
 # Proccess images and save on AWS
 gem 'paperclip'
