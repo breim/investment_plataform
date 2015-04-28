@@ -30,11 +30,11 @@ class ApplicationController < ActionController::Base
 	# Redirect after sign_in user
 	def after_sign_in_path_for(resource)
 		case resource
-		when User
-			then 
-			projects_path 
-		else 
-			root_path
+			when User
+				then 
+				projects_path 
+			else 
+				root_path
+		end
 	end
-
 end
