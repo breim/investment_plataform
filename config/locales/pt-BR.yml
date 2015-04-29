@@ -219,6 +219,8 @@ pt-BR:
         term: "Prazo para arrecadação"
         video_link: "Vídeo do projeto"
         slug: "Link da startup"
+      investment:
+        value: "Valor do investmento"
       course:
         name: "Matéria"
       member:

@@ -41,5 +41,8 @@
   <%= @project.user %>
 </p>
 
+<%= link_to "Investimentos da startup",project_investments_path(params[:id]), class: "btn btn-default" %>
+
+<%= link_to "Investir nesta startup",new_project_investment_path(params[:id]), class: "btn btn-success" %>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>

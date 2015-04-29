@@ -1,10 +1,11 @@
 class InvestmentsController < ApplicationController
   before_action :set_investment, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, only: [:index,:create,:new]
 
   respond_to :html
 
   def index
-    @investments = Investment.all
+    @investments = @project.investments
     respond_with(@investments)
   end
 
@@ -22,8 +23,10 @@ class InvestmentsController < ApplicationController
 
   def create
     @investment = Investment.new(investment_params)
+    @investment.user_id = current_user.id
+    @investment.project_id = @project.id
     @investment.save
-    respond_with(@investment)
+    respond_with(@investment, location:  project_investment_path(@project,@investment))
   end
 
   def update
@@ -37,11 +40,15 @@ class InvestmentsController < ApplicationController
   end
 
   private
+    def set_project
+       @project = Project.find_by_slug(params[:project_id])
+    end
+
     def set_investment
       @investment = Investment.find(params[:id])
     end
 
     def investment_params
-      params.require(:investment).permit(:project_id, :user_id, :value)
+      params.require(:investment).permit(:value)
     end
 end
