@@ -5,13 +5,13 @@ GIT
     bootstrap_form (2.3.0)
 
 GIT
-  remote: git://github.com/breim/bootsy
-  revision: a6d360a6c16bc55f2d7030a267adeeadd4a21edb
+  remote: git://github.com/volmer/bootsy
+  revision: 930b8830de60fa5bd22f9ac5510187acc42c9b7c
   specs:
-    bootsy (2.0.9)
-      carrierwave (~> 0.10.0)
-      mini_magick (~> 3.7.0)
-      remotipart (~> 1.2.1)
+    bootsy (2.1.0)
+      carrierwave (~> 0.10)
+      mini_magick (~> 4.0)
+      remotipart (~> 1.2)
 
 GEM
   remote: https://rubygems.org/
@@ -154,8 +154,7 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.5)
-    mini_magick (3.7.0)
-      subexec (~> 0.2.1)
+    mini_magick (4.2.3)
     mini_portile (0.6.2)
     minitest (5.6.1)
     multi_json (1.11.0)
@@ -243,7 +242,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    subexec (0.2.3)
     thin (1.6.3)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0)

@@ -29,7 +29,7 @@ gem 'shareable'
 gem 'socialization'
 
 #Text editor
-gem 'bootsy', :git => 'git://github.com/breim/bootsy'
+gem 'bootsy', :git => 'git://github.com/volmer/bootsy'
 
 # Figaro to handle some ENV variables aka password in application.yml
 gem "figaro"

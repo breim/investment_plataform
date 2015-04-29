@@ -22,6 +22,7 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
+    @project.user_id = current_user.id
     @project.save
     respond_with(@project)
   end
@@ -38,10 +39,10 @@ class ProjectsController < ApplicationController
 
   private
     def set_project
-      @project = Project.find(params[:id])
+      @project = Project.find_by_slug(params[:id])
     end
 
     def project_params
-      params.require(:project).permit(:name, :slogan, :description, :value, :term, :video_link, :category_id, :user_id)
+      params.require(:project).permit(:name, :slogan, :description, :value, :term, :video_link, :category_id,:bootsy_image_gallery_id, :slug)
     end
 end
